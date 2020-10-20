@@ -1,0 +1,17 @@
+name: polybar
+version: '3.4.3'
+summary: A fast and easy-to-use status bar
+description: Polybar aims to help users build beautiful and highly customizable status bars for their desktop environment, without the need of having a black belt in shell scripting.
+grade: stable
+confinement: strict
+
+base: core18
+
+apps:
+  polybar:
+    command: bin/polybar
+
+parts:
+  gnu-hello:
+    source: https://github.com/polybar/polybar/releases/download/3.4.3/polybar-3.4.3.tar
+    plugin: autotools
